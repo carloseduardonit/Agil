@@ -1,0 +1,71 @@
+@startuml
+abstract class agil.pessoa.Pessoa
+abstract class agil.pessoa.pessoaFisica.possui.CertidaoNascimento
+abstract class agil.util.telefone.Telefone
+annotation java.lang.Override
+annotation java.lang.SuppressWarnings
+class agil.Agil
+class agil.Const.Messagem
+class agil.Const.Seletor
+class agil.dado.ModuloConector
+class agil.pessoa.pessoaFisica.PessoaFisica
+class agil.pessoa.pessoaFisica.possui.CPF
+class agil.pessoa.pessoaFisica.possui.CarteiraTrabalho
+class agil.pessoa.pessoaFisica.possui.Identidade
+class agil.pessoa.pessoaFisica.possui.TelaCPF
+class agil.pessoa.pessoaJuridica.PessoaJuridica
+class agil.pessoa.possui.Casa
+class agil.pessoa.possui.Veiculo
+class agil.util.email.Email
+class agil.util.endereco.CEP
+class agil.util.endereco.Endereco
+class java.lang.Object
+class java.sql.Date
+class java.util.Date
+class java.util.concurrent.TimeoutException
+class javax.swing.JFrame
+class javax.swing.JOptionPane
+enum agil.util.endereco.ESTADO
+agil.pessoa.Pessoa ..> agil.util.telefone.Telefone
+agil.pessoa.Pessoa ..> agil.Const.Messagem
+agil.pessoa.Pessoa ..> agil.dado.ModuloConector
+agil.pessoa.Pessoa ..> agil.util.email.Email
+agil.pessoa.pessoaFisica.possui.CertidaoNascimento --|> agil.pessoa.pessoaFisica.PessoaFisica
+agil.pessoa.pessoaFisica.possui.CertidaoNascimento ..> java.util.Date
+agil.util.telefone.Telefone ..> agil.Const.Messagem
+agil.util.telefone.Telefone ..> agil.dado.ModuloConector
+agil.Agil ..> agil.util.telefone.Telefone
+agil.Agil ..> agil.dado.ModuloConector
+agil.Agil ..> agil.pessoa.pessoaFisica.PessoaFisica
+agil.Agil ..> agil.util.email.Email
+agil.Const.Messagem ..> javax.swing.JOptionPane
+agil.Const.Seletor --|> java.lang.Object
+agil.dado.ModuloConector ..> agil.Const.Messagem
+agil.dado.ModuloConector ..> java.util.concurrent.TimeoutException
+agil.dado.ModuloConector ..> javax.swing.JOptionPane
+agil.pessoa.pessoaFisica.PessoaFisica --|> agil.pessoa.Pessoa
+agil.pessoa.pessoaFisica.PessoaFisica ..> agil.util.telefone.Telefone
+agil.pessoa.pessoaFisica.PessoaFisica ..> java.lang.Override
+agil.pessoa.pessoaFisica.PessoaFisica ..> agil.Const.Messagem
+agil.pessoa.pessoaFisica.PessoaFisica ..> agil.dado.ModuloConector
+agil.pessoa.pessoaFisica.PessoaFisica ..> agil.util.email.Email
+agil.pessoa.pessoaFisica.possui.CPF --|> agil.pessoa.pessoaFisica.possui.Identidade
+agil.pessoa.pessoaFisica.possui.CPF ..> java.util.Date
+agil.pessoa.pessoaFisica.possui.CarteiraTrabalho ..> agil.Const.Messagem
+agil.pessoa.pessoaFisica.possui.CarteiraTrabalho ..> agil.dado.ModuloConector
+agil.pessoa.pessoaFisica.possui.Identidade --|> agil.pessoa.pessoaFisica.possui.CertidaoNascimento
+agil.pessoa.pessoaFisica.possui.Identidade ..> java.sql.Date
+agil.pessoa.pessoaFisica.possui.TelaCPF ..> java.lang.SuppressWarnings
+agil.pessoa.pessoaFisica.possui.TelaCPF --|> javax.swing.JFrame
+agil.pessoa.pessoaJuridica.PessoaJuridica --|> agil.pessoa.Pessoa
+agil.pessoa.pessoaJuridica.PessoaJuridica ..> agil.util.telefone.Telefone
+agil.pessoa.pessoaJuridica.PessoaJuridica ..> java.lang.Override
+agil.pessoa.pessoaJuridica.PessoaJuridica ..> agil.Const.Messagem
+agil.pessoa.pessoaJuridica.PessoaJuridica ..> agil.dado.ModuloConector
+agil.pessoa.pessoaJuridica.PessoaJuridica ..> agil.util.email.Email
+agil.util.email.Email ..> agil.Const.Messagem
+agil.util.email.Email ..> agil.dado.ModuloConector
+agil.util.endereco.CEP ..> agil.Const.Messagem
+agil.util.endereco.CEP ..> agil.dado.ModuloConector
+agil.util.endereco.Endereco ..> agil.dado.ModuloConector
+@enduml

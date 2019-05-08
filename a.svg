@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="214px" preserveAspectRatio="none" style="width:264px;height:214px;background:#000000;" version="1.1" viewBox="0 0 264 214" width="264px" zoomAndPan="magnify">
+    <defs/>
+    <g>
+        <text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="140" x="5" y="19.5332">Dot Executable: null</text>
+        <text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="173" x="5" y="37.1426">No dot executable found</text>
+        <text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="258" x="5" y="54.752">Cannot find Graphviz. You should try</text>
+        <text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="72.3613"/>
+        <text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="71" x="5" y="89.9707">@startuml</text>
+        <text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="50" x="5" y="107.5801">testdot</text>
+        <text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="66" x="5" y="125.1895">@enduml</text>
+        <text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="142.7988"/>
+        <text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="15" x="9" y="160.4082">or</text>
+        <text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="178.0176"/>
+        <text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="201" x="5" y="195.627">java -jar plantuml.jar -testdot</text>
+        <text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="213.2363"/>
+        <!--
+@startuml
+abstract class agil.pessoa.Pessoa
+abstract class agil.pessoa.pessoaFisica.possui.CertidaoNascimento
+abstract class agil.util.telefone.Telefone
+annotation java.lang.Override
+annotation java.lang.SuppressWarnings
+class agil.Agil
+class agil.Const.Messagem
+class agil.Const.Seletor
+class agil.dado.ModuloConector
+class agil.pessoa.pessoaFisica.PessoaFisica
+class agil.pessoa.pessoaFisica.possui.CPF
+class agil.pessoa.pessoaFisica.possui.CarteiraTrabalho
+class agil.pessoa.pessoaFisica.possui.Identidade
+class agil.pessoa.pessoaFisica.possui.TelaCPF
+class agil.pessoa.pessoaJuridica.PessoaJuridica
+class agil.pessoa.possui.Casa
+class agil.pessoa.possui.Veiculo
+class agil.util.email.Email
+class agil.util.endereco.CEP
+class agil.util.endereco.Endereco
+class java.lang.Object
+class java.sql.Date
+class java.util.Date
+class java.util.concurrent.TimeoutException
+class javax.swing.JFrame
+class javax.swing.JOptionPane
+enum agil.util.endereco.ESTADO
+agil.pessoa.Pessoa ..> agil.util.telefone.Telefone
+agil.pessoa.Pessoa ..> agil.Const.Messagem
+agil.pessoa.Pessoa ..> agil.dado.ModuloConector
+agil.pessoa.Pessoa ..> agil.util.email.Email
+agil.pessoa.pessoaFisica.possui.CertidaoNascimento - -|> agil.pessoa.pessoaFisica.PessoaFisica
+agil.pessoa.pessoaFisica.possui.CertidaoNascimento ..> java.util.Date
+agil.util.telefone.Telefone ..> agil.Const.Messagem
+agil.util.telefone.Telefone ..> agil.dado.ModuloConector
+agil.Agil ..> agil.util.telefone.Telefone
+agil.Agil ..> agil.dado.ModuloConector
+agil.Agil ..> agil.pessoa.pessoaFisica.PessoaFisica
+agil.Agil ..> agil.util.email.Email
+agil.Const.Messagem ..> javax.swing.JOptionPane
+agil.Const.Seletor - -|> java.lang.Object
+agil.dado.ModuloConector ..> agil.Const.Messagem
+agil.dado.ModuloConector ..> java.util.concurrent.TimeoutException
+agil.dado.ModuloConector ..> javax.swing.JOptionPane
+agil.pessoa.pessoaFisica.PessoaFisica - -|> agil.pessoa.Pessoa
+agil.pessoa.pessoaFisica.PessoaFisica ..> agil.util.telefone.Telefone
+agil.pessoa.pessoaFisica.PessoaFisica ..> java.lang.Override
+agil.pessoa.pessoaFisica.PessoaFisica ..> agil.Const.Messagem
+agil.pessoa.pessoaFisica.PessoaFisica ..> agil.dado.ModuloConector
+agil.pessoa.pessoaFisica.PessoaFisica ..> agil.util.email.Email
+agil.pessoa.pessoaFisica.possui.CPF - -|> agil.pessoa.pessoaFisica.possui.Identidade
+agil.pessoa.pessoaFisica.possui.CPF ..> java.util.Date
+agil.pessoa.pessoaFisica.possui.CarteiraTrabalho ..> agil.Const.Messagem
+agil.pessoa.pessoaFisica.possui.CarteiraTrabalho ..> agil.dado.ModuloConector
+agil.pessoa.pessoaFisica.possui.Identidade - -|> agil.pessoa.pessoaFisica.possui.CertidaoNascimento
+agil.pessoa.pessoaFisica.possui.Identidade ..> java.sql.Date
+agil.pessoa.pessoaFisica.possui.TelaCPF ..> java.lang.SuppressWarnings
+agil.pessoa.pessoaFisica.possui.TelaCPF - -|> javax.swing.JFrame
+agil.pessoa.pessoaJuridica.PessoaJuridica - -|> agil.pessoa.Pessoa
+agil.pessoa.pessoaJuridica.PessoaJuridica ..> agil.util.telefone.Telefone
+agil.pessoa.pessoaJuridica.PessoaJuridica ..> java.lang.Override
+agil.pessoa.pessoaJuridica.PessoaJuridica ..> agil.Const.Messagem
+agil.pessoa.pessoaJuridica.PessoaJuridica ..> agil.dado.ModuloConector
+agil.pessoa.pessoaJuridica.PessoaJuridica ..> agil.util.email.Email
+agil.util.email.Email ..> agil.Const.Messagem
+agil.util.email.Email ..> agil.dado.ModuloConector
+agil.util.endereco.CEP ..> agil.Const.Messagem
+agil.util.endereco.CEP ..> agil.dado.ModuloConector
+agil.util.endereco.Endereco ..> agil.dado.ModuloConector
+@enduml
+
+PlantUML version 2017.11(Wed Apr 19 13:18:59 BRT 2017)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_201-b09
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: pt
+Country: BR
+-->
+    </g>
+</svg>

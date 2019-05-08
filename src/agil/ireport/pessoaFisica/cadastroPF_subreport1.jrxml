@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cadastroPF_subreport1" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="43c174e4-c065-4843-8a4b-48c99083c925">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="101"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     *,
+     pessoa.`id` AS pessoa_id,
+     pessoa.`nomeCompleto` AS pessoa_nomeCompleto,
+     pessoa.`tipoPessoa` AS pessoa_tipoPessoa,
+     pessoa.`login` AS pessoa_login,
+     pessoa.`senha` AS pessoa_senha,
+     certidaoNascimento.`idPessoa` AS certidaoNascimento_idPessoa,
+     certidaoNascimento.`dataNascimento` AS certidaoNascimento_dataNascimento,
+     certidaoNascimento.`bairroNascimento` AS certidaoNascimento_bairroNascimento,
+     certidaoNascimento.`cidadeNascimento` AS certidaoNascimento_cidadeNascimento,
+     certidaoNascimento.`estadoNascimento` AS certidaoNascimento_estadoNascimento,
+     certidaoNascimento.`nomeMae` AS certidaoNascimento_nomeMae,
+     certidaoNascimento.`nomePai` AS certidaoNascimento_nomePai,
+     certidaoNascimento.`nomeLivro` AS certidaoNascimento_nomeLivro,
+     certidaoNascimento.`nFolhas` AS certidaoNascimento_nFolhas,
+     certidaoNascimento.`nTermo` AS certidaoNascimento_nTermo,
+     certidaoNascimento.`bairroRegistro` AS certidaoNascimento_bairroRegistro,
+     certidaoNascimento.`cidadeRegistro` AS certidaoNascimento_cidadeRegistro,
+     certidaoNascimento.`estadoRegistro` AS certidaoNascimento_estadoRegistro
+FROM
+     `certidaoNascimento` certidaoNascimento,
+     `pessoa` pessoa
+WHERE
+     id = 1]]>
+	</queryString>
+	<field name="idPessoa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dataNascimento" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bairroNascimento" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cidadeNascimento" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="estadoNascimento" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nomeMae" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nomePai" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nomeLivro" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nFolhas" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nTermo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bairroRegistro" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cidadeRegistro" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="estadoRegistro" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nomeCompleto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipoPessoa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="login" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="senha" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pessoa_id" class="java.lang.Integer"/>
+	<field name="pessoa_nomeCompleto" class="java.lang.String"/>
+	<field name="pessoa_tipoPessoa" class="java.lang.String"/>
+	<field name="pessoa_login" class="java.lang.String"/>
+	<field name="pessoa_senha" class="java.lang.String"/>
+	<field name="certidaoNascimento_idPessoa" class="java.lang.Integer"/>
+	<field name="certidaoNascimento_dataNascimento" class="java.sql.Date"/>
+	<field name="certidaoNascimento_bairroNascimento" class="java.lang.String"/>
+	<field name="certidaoNascimento_cidadeNascimento" class="java.lang.String"/>
+	<field name="certidaoNascimento_estadoNascimento" class="java.lang.String"/>
+	<field name="certidaoNascimento_nomeMae" class="java.lang.String"/>
+	<field name="certidaoNascimento_nomePai" class="java.lang.String"/>
+	<field name="certidaoNascimento_nomeLivro" class="java.lang.String"/>
+	<field name="certidaoNascimento_nFolhas" class="java.lang.Integer"/>
+	<field name="certidaoNascimento_nTermo" class="java.lang.Integer"/>
+	<field name="certidaoNascimento_bairroRegistro" class="java.lang.String"/>
+	<field name="certidaoNascimento_cidadeRegistro" class="java.lang.String"/>
+	<field name="certidaoNascimento_estadoRegistro" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<textField>
+				<reportElement x="426" y="14" width="123" height="20" uuid="9462ae11-4b73-4d8c-a937-ff312d4b05bc"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="509" y="14" width="40" height="20" uuid="d61abab0-8061-4a53-a1ec-831b3aa5a62e"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
