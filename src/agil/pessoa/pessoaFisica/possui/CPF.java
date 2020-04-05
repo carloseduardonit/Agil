@@ -22,21 +22,21 @@ public class CPF extends Identidade {
     public static void main(String[] args) {
         //deletarCPF();
         //criarCPF();
-        nCPF =1;
-        int id =1;
+        nCPF = 1;
+        int id = 1;
         MetodoAuxiliar.setDia(18);
         MetodoAuxiliar.setMes(9);
         MetodoAuxiliar.setAno(1987);
-       adicionarCPF(id, String.valueOf(nCPF), MetodoAuxiliar.dataUSs());
-        System.out.println(MetodoAuxiliar.getAno()+"/"+MetodoAuxiliar.getMes()+"/"+MetodoAuxiliar.getDia());
+        adicionarCPF(id, String.valueOf(nCPF), MetodoAuxiliar.dataUSs());
+        System.out.println(MetodoAuxiliar.getAno() + "/" + MetodoAuxiliar.getMes() + "/" + MetodoAuxiliar.getDia());
     }
-    static Connection conexao;
-    static PreparedStatement pst;
-    static Statement stmt;
-    static ResultSet rs;
+    private static Connection conexao;
+    private static PreparedStatement pst;
+    private static Statement stmt;
+    private static ResultSet rs;
     private static int nCPF;
     private static Date dataEmissaoCPF;
-    private static PessoaFisica pf = new PessoaFisica();
+    private final static PessoaFisica PF = new PessoaFisica();
 
     /**
      * TESTAR
@@ -64,7 +64,7 @@ public class CPF extends Identidade {
                 if (criado == 0) {
                     Messagem.chamarTela(Messagem.tabelaCriada(CPF.class.getSimpleName()));
                     ModuloConector.fecharConexao(conexao, rs, pst, stmt);
-                } 
+                }
             }
         } catch (NullPointerException npe) {
             Messagem.chamarTela("O servidor esta desligado !!!");
@@ -88,7 +88,7 @@ public class CPF extends Identidade {
                     Messagem.chamarTela(Messagem.tabelaDeletada(CPF.class.getSimpleName()));
                 }
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             Messagem.chamarTela(e);
         }
     }
@@ -123,7 +123,7 @@ public class CPF extends Identidade {
                     ModuloConector.fecharConexao(conexao, rs, pst, stmt);
                 }
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             Messagem.chamarTela(e);
         }
     }
@@ -153,7 +153,7 @@ public class CPF extends Identidade {
                     ModuloConector.fecharConexao(conexao, rs, pst, stmt);
                 }
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             Messagem.chamarTela(e);
         }
     }
@@ -182,7 +182,7 @@ public class CPF extends Identidade {
                     ModuloConector.fecharConexao(conexao, rs, pst, stmt);
                 }
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             Messagem.chamarTela(e);
         }
     }
@@ -210,7 +210,7 @@ public class CPF extends Identidade {
                     ModuloConector.fecharConexao(conexao, rs, pst, stmt);
                 }
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             Messagem.chamarTela(e);
         }
     }
@@ -245,7 +245,7 @@ public class CPF extends Identidade {
                     ModuloConector.fecharConexao(conexao, rs, pst, stmt);
                 }
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             Messagem.chamarTela(e);
         }
     }
@@ -266,11 +266,11 @@ public class CPF extends Identidade {
                 pst.setString(1, nCPF);
                 rs = pst.executeQuery();
                 if (rs.next()) {
-                    pf.setId(rs.getInt(1));
+                    PF.setId(rs.getInt(1));
                     //setDataEmissaoCPF(rs.getString(2))
                 }
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             Messagem.chamarTela(e);
         }
     }
@@ -283,19 +283,19 @@ public class CPF extends Identidade {
     public static void pesquisaCPF(int idPessoa) {
         CPF();
         try {
-            if (String.valueOf(id).isEmpty()) {
+            if (String.valueOf(idPessoa).isEmpty()) {
                 Messagem.chamarTela(Messagem.VAZIO("O id da Pessoa"));
             } else {
                 String sql = "select CPF.nCPF,CPF.dataEmissaoCPF from CPF where idPessoa=?";
                 pst = conexao.prepareStatement(sql);
-                pst.setInt(1, id);
+                pst.setInt(1, idPessoa);
                 rs = pst.executeQuery();
                 if (rs.next()) {
                     setnCPF(rs.getInt(1));
                     //setDataEmissaoCPF(rs.getString(2))
                 }
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             Messagem.chamarTela(e);
         }
     }
@@ -335,7 +335,7 @@ public class CPF extends Identidade {
      */
     public static void setDataEmissaoCPF(Date dataEmissaoCPF) {
         SimpleDateFormat sdf = new SimpleDateFormat();
-        
+
         CPF.dataEmissaoCPF = dataEmissaoCPF;
     }
 
